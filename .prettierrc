@@ -1,0 +1,11 @@
+{
+  "printWidth": 120,
+  "semi": false,
+  "arrowParens": "always",
+  "singleQuote": true,
+  "quoteProps": "preserve",
+  "trailingComma": "all",
+  "endOfLine": "auto",
+  "jsxBracketSameLine": true,
+  "vueIndentScriptAndStyle": true
+}
