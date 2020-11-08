@@ -4943,7 +4943,111 @@ var UToast_Toast = /*#__PURE__*/function () {
 }();
 
 
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"18666254-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/UClipboard/UClipboard.vue?vue&type=template&id=314a6c8a&
+var UClipboardvue_type_template_id_314a6c8a_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('span',[_vm._t("default"),(_vm.text && !_vm.success)?_c('v-icon',{staticClass:"ml-2 mb-1",attrs:{"small":""},on:{"click":_vm.onCopy}},[_vm._v("mdi-content-copy")]):_vm._e(),(_vm.success)?_c('v-tooltip',{attrs:{"right":"","transition":"none"},scopedSlots:_vm._u([{key:"activator",fn:function(ref){
+var on = ref.on;
+var attrs = ref.attrs;
+return [_c('v-icon',_vm._g(_vm._b({staticClass:"ml-2 mb-1",attrs:{"small":"","color":"green"}},'v-icon',attrs,false),on),[_vm._v("mdi-check")])]}}],null,false,4268451920)},[_c('span',[_vm._v(_vm._s(_vm.$t('copied')))])]):_vm._e()],2)}
+var UClipboardvue_type_template_id_314a6c8a_staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./src/components/UClipboard/UClipboard.vue?vue&type=template&id=314a6c8a&
+
+// CONCATENATED MODULE: ./src/utils/index.js
+/* harmony default export */ var utils = ({
+  copyToClipboard: function copyToClipboard(text) {
+    if (window.clipboardData && window.clipboardData.setData) {
+      return window.clipboardData.setData('Text', text);
+    } else if (document.queryCommandSupported && document.queryCommandSupported('copy')) {
+      var textarea = document.createElement('textarea');
+      textarea.textContent = text;
+      textarea.style.position = 'fixed'; // Prevent scrolling to bottom of page in Microsoft Edge.
+
+      document.body.appendChild(textarea);
+      textarea.select();
+
+      try {
+        return document.execCommand('copy'); // Security exception may be thrown by some browsers.
+      } catch (ex) {
+        console.warn('Copy to clipboard failed.', ex);
+        return false;
+      } finally {
+        document.body.removeChild(textarea);
+      }
+    }
+  }
+});
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/UClipboard/UClipboard.vue?vue&type=script&lang=js&
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ var UClipboardvue_type_script_lang_js_ = ({
+  props: {
+    text: String
+  },
+  data: function data() {
+    return {
+      tout: null,
+      success: false
+    };
+  },
+  methods: {
+    onCopy: function onCopy() {
+      var _this = this;
+
+      if (utils.copyToClipboard(this.text)) {
+        this.success = true;
+        this.tout = setTimeout(function () {
+          _this.success = false;
+          clearTimeout(_this.tout);
+          _this.tout = null;
+        }, 3000);
+      }
+    }
+  },
+  beforeDestroy: function beforeDestroy() {
+    if (this.tout) {
+      clearTimeout(this.tout);
+    }
+  }
+});
+// CONCATENATED MODULE: ./src/components/UClipboard/UClipboard.vue?vue&type=script&lang=js&
+ /* harmony default export */ var UClipboard_UClipboardvue_type_script_lang_js_ = (UClipboardvue_type_script_lang_js_); 
+// CONCATENATED MODULE: ./src/components/UClipboard/UClipboard.vue
+
+
+
+
+
+/* normalize component */
+
+var UClipboard_component = normalizeComponent(
+  UClipboard_UClipboardvue_type_script_lang_js_,
+  UClipboardvue_type_template_id_314a6c8a_render,
+  UClipboardvue_type_template_id_314a6c8a_staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* harmony default export */ var UClipboard = (UClipboard_component.exports);
+// CONCATENATED MODULE: ./src/components/UClipboard/index.js
+
+/* harmony default export */ var components_UClipboard = (UClipboard);
 // CONCATENATED MODULE: ./src/main.js
+
 
 
 
@@ -4957,6 +5061,8 @@ var Vuntangle = {
   install: function install(Vue, options) {
     // if (install.installed && _Vue === Vue) return
     // install.installed = true
+    // register components
+    Vue.component('UClipboard', components_UClipboard);
     Vue.ut = {
       // toast: new UtToast(Vue, { ...options }),
       dialog: new UDialog_Dialog(Vue, _objectSpread2({}, options)),

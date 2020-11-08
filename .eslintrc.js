@@ -8,7 +8,16 @@ module.exports = {
     parser: "babel-eslint"
   },
   rules: {
-    "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
-    "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off"
-  }
+    'prettier/prettier': 'error',
+    'no-console': 'off',
+    'vue/no-v-html': 'off',
+    'space-before-function-paren': 'off',
+    'indent': 'off',
+    'vue/max-attributes-per-line': 'off',
+    'vue/singleline-html-element-content-newline': 'off',
+    'vue/require-default-prop': 'off',
+    'vue/html-self-closing': 'off',
+    'vue/html-indent': 'off',
+    // 'quote-props': [1, 'always']
+  },
 };
