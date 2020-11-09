@@ -6,6 +6,9 @@ import UGrid from '@/components/UGrid'
 import UClipboard from '@/components/UClipboard'
 import UWidget from '@/components/UWidget'
 
+import '../node_modules/ag-grid-community/dist/styles/ag-grid.css'
+import '../node_modules/ag-grid-community/dist/styles/ag-theme-alpine.css'
+
 /**
  * The base Vuntangle plugin
  * install is called upon Vue.use()

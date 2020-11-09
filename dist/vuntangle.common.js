@@ -51092,6 +51092,13 @@ if (DESCRIPTORS && !(NAME in FunctionPrototype)) {
 
 /***/ }),
 
+/***/ "b360":
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
 /***/ "b575":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -51498,6 +51505,13 @@ $({ target: 'Object', stat: true, forced: Object.assign !== assign }, {
   assign: assign
 });
 
+
+/***/ }),
+
+/***/ "cdcb":
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
 
 /***/ }),
 
@@ -54720,7 +54734,15 @@ var UWidget_component = normalizeComponent(
 // CONCATENATED MODULE: ./src/components/UWidget/index.js
 
 /* harmony default export */ var components_UWidget = (UWidget);
+// EXTERNAL MODULE: ./node_modules/ag-grid-community/dist/styles/ag-grid.css
+var ag_grid = __webpack_require__("b360");
+
+// EXTERNAL MODULE: ./node_modules/ag-grid-community/dist/styles/ag-theme-alpine.css
+var ag_theme_alpine = __webpack_require__("cdcb");
+
 // CONCATENATED MODULE: ./src/main.js
+
+
 
 
 

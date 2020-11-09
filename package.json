@@ -2,7 +2,7 @@
   "name": "vuntangle",
   "version": "0.1.0",
   "private": true,
-  "main": "dist/vuntangle.umd.min.js",
+  "main": "dist/vuntangle.umd.js",
   "files": [
     "dist/*"
   ],
