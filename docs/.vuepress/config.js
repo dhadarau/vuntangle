@@ -3,7 +3,7 @@ module.exports = {
   description: 'Untangle Vue & Vuetify based UI library',
   host: '0.0.0.0',
   port: 9090,
-  base: 'vuntangle',
+  base: '/vuntangle/',
   themeConfig: {
     // logo: '/untangle-logo.svg',
     // nav: [
