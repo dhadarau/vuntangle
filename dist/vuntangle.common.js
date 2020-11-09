@@ -52712,6 +52712,9 @@ module.exports = function (key) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "_Vue", function() { return /* reexport */ _Vue; });
+
 // CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/setPublicPath.js
 // This file is imported into lib/wc client bundles.
 
@@ -54681,15 +54684,14 @@ var UClipboard_component = normalizeComponent(
 // CONCATENATED MODULE: ./src/components/UClipboard/index.js
 
 /* harmony default export */ var components_UClipboard = (UClipboard);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"abc986a2-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/UWidget/UWidget.vue?vue&type=template&id=0b61103f&
-var UWidgetvue_type_template_id_0b61103f_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('v-card',{staticClass:"pa-0 d-flex flex-column",attrs:{"outlined":""}},[_c('v-card-title',{staticClass:"font-weight-medium utGreen--text",domProps:{"textContent":_vm._s(_vm.title)}}),_c('v-card-text',{staticClass:"flex-grow-1"},[_vm._t("default")],2),(_vm.$slots.actions)?_c('v-divider'):_vm._e(),(_vm.$slots.actions)?_c('v-card-actions',{staticClass:"d-flex align-stretch pa-0"},[_vm._t("actions")],2):_vm._e()],1)}
-var UWidgetvue_type_template_id_0b61103f_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"abc986a2-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/UWidget/UWidget.vue?vue&type=template&id=5390fd4c&
+var UWidgetvue_type_template_id_5390fd4c_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('v-card',{staticClass:"pa-0 d-flex flex-column",attrs:{"outlined":""}},[_c('v-card-title',{staticClass:"font-weight-light",domProps:{"textContent":_vm._s(_vm.title)}}),_c('div',{staticClass:"flex-grow-1 px-4"},[_vm._t("default")],2),(_vm.$slots.actions)?_c('v-divider'):_vm._e(),(_vm.$slots.actions)?_c('v-card-actions',{staticClass:"d-flex align-stretch pa-0"},[_vm._t("actions")],2):_vm._e()],1)}
+var UWidgetvue_type_template_id_5390fd4c_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/UWidget/UWidget.vue?vue&type=template&id=0b61103f&
+// CONCATENATED MODULE: ./src/components/UWidget/UWidget.vue?vue&type=template&id=5390fd4c&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/UWidget/UWidget.vue?vue&type=script&lang=js&
-//
 //
 //
 //
@@ -54721,8 +54723,8 @@ var UWidgetvue_type_template_id_0b61103f_staticRenderFns = []
 
 var UWidget_component = normalizeComponent(
   UWidget_UWidgetvue_type_script_lang_js_,
-  UWidgetvue_type_template_id_0b61103f_render,
-  UWidgetvue_type_template_id_0b61103f_staticRenderFns,
+  UWidgetvue_type_template_id_5390fd4c_render,
+  UWidgetvue_type_template_id_5390fd4c_staticRenderFns,
   false,
   null,
   null,
@@ -54750,39 +54752,40 @@ var ag_theme_alpine = __webpack_require__("cdcb");
 
 
 
+var _Vue;
 /**
- * The base Vuntangle plugin
- * install is called upon Vue.use()
+ * The base Vuntangle plugin install which is called upon Vue.use()
  */
 
-var Vuntangle = {
-  install: function install(Vue, options) {
-    // if (install.installed && _Vue === Vue) return
-    // install.installed = true
-    // register components
-    Vue.component('UGrid', components_UGrid);
-    Vue.component('UClipboard', components_UClipboard);
-    Vue.component('UWidget', components_UWidget);
-    Vue.ut = {
-      // toast: new UtToast(Vue, { ...options }),
-      dialog: new UDialog_Dialog(Vue, _objectSpread2({}, options)),
-      confirm: new UConfirm_Confirm(Vue, _objectSpread2({}, options)),
-      toast: new UToast_Toast(Vue, _objectSpread2({}, options))
-    };
-    Object.defineProperties(Vue.prototype, {
-      $ut: {
-        get: function get() {
-          return Vue.ut;
-        }
-      }
-    });
+function install(Vue, options) {
+  if (install.installed && _Vue === Vue) {
+    console.warn('already installed.');
+    return;
   }
-};
-/* harmony default export */ var src_main = (Vuntangle);
+
+  install.installed = true;
+  _Vue = Vue; // register components
+
+  Vue.component('UGrid', components_UGrid);
+  Vue.component('UClipboard', components_UClipboard);
+  Vue.component('UWidget', components_UWidget);
+  Vue.ut = {
+    dialog: new UDialog_Dialog(Vue, _objectSpread2({}, options)),
+    confirm: new UConfirm_Confirm(Vue, _objectSpread2({}, options)),
+    toast: new UToast_Toast(Vue, _objectSpread2({}, options))
+  };
+  Object.defineProperties(Vue.prototype, {
+    $ut: {
+      get: function get() {
+        return Vue.ut;
+      }
+    }
+  });
+}
 // CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/entry-lib.js
 
 
-/* harmony default export */ var entry_lib = __webpack_exports__["default"] = (src_main);
+/* harmony default export */ var entry_lib = __webpack_exports__["default"] = (install);
 
 
 

@@ -1,6 +1,8 @@
 module.exports = {
   title: 'VUntangle',
   description: 'Untangle Vue & Vuetify based UI library',
+  host: '0.0.0.0',
+  port: 9090,
   themeConfig: {
     // logo: '/untangle-logo.svg',
     // nav: [

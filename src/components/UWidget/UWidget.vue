@@ -1,11 +1,10 @@
 <template>
   <v-card outlined class="pa-0 d-flex flex-column">
-    <v-card-title class="font-weight-medium utGreen--text" v-text="title" />
-    <!-- <v-card-subtitle></v-card-subtitle> -->
+    <v-card-title class="font-weight-light" v-text="title" />
 
-    <v-card-text class="flex-grow-1">
+    <div class="flex-grow-1 px-4">
       <slot></slot>
-    </v-card-text>
+    </div>
 
     <v-divider v-if="$slots.actions" />
     <v-card-actions v-if="$slots.actions" class="d-flex align-stretch pa-0">
