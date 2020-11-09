@@ -9,10 +9,7 @@
   import utils from '@/utils'
   export default {
     props: {
-      copy: {
-        type: String,
-        required: true,
-      },
+      copy: String,
     },
     data() {
       return {
