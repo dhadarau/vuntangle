@@ -21,16 +21,19 @@
       <v-card-actions class="pa-6">
         <v-spacer />
         <v-btn
-          depressed
-          color="transparent"
-          :small="false"
+          text
           min-width="80"
           class="text-capitalize grey--text"
+          v-text="$t(cancelLabel || 'button.no')"
           @click="onClose"
-        >
-          {{ cancelLabel || 'btn.no' }}
-        </v-btn>
-        <v-btn :small="false" min-width="80" @click="onConfirm">{{ confirmLabel || 'btn.yes' }}</v-btn>
+        />
+        <v-btn
+          min-width="80"
+          color="primary"
+          elevation="0"
+          v-text="$t(confirmLabel || 'button.yes')"
+          @click="onConfirm"
+        />
       </v-card-actions>
       <v-overlay v-if="progress" absolute color="white">
         <v-progress-circular indeterminate color="utGreen" />
@@ -59,28 +62,7 @@
       },
     },
 
-    mounted() {},
-
     methods: {
-      /**
-       * Method called when showing the dialog
-       *
-       * The following options can be set to the dialog
-       * @param {Object} options
-       * @param {String} options.title - The dialog window title as localized key
-       * @param {String} options.message - The message to be confirmed (confirm modal)
-       * @param {String} options.cancelLabel - The cancel button label as localized key
-       * @param {String} options.confirmLabel - The confirm button label as localized key
-       * @param {Number} options.width - The dialog width in pixels, default 600
-       * @param {Number} options.height - The content component max-height in pixels, default 400
-       */
-      // show(options) {
-      //   Object.assign(this, { ...options })
-      //   if (!this.component && !this.message) {
-      //     console.warn('UtDialog: "component" or "message" must be set')
-      //   }
-      // },
-
       /**
        * Hides and resets the dialog data
        */
@@ -89,6 +71,7 @@
         this.message = null
         this.cancelLabel = null
         this.confirmLabel = null
+        this.width = null
         this.progress = false
         this.$off('confirm')
       },

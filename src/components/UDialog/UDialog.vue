@@ -15,23 +15,20 @@
       </v-card-title>
 
       <!-- the component being rendered inside dialog with the props passed to it -->
-      <div v-if="contentComponent" :style="`max-height: ${height || 400}px; overflow-y: auto`" class="px-6">
-        <component :is="contentComponent" ref="content" v-bind="componentProps" />
+      <div v-if="component" :style="`max-height: ${height || 400}px; overflow-y: auto`" class="px-6">
+        <component :is="component" ref="content" v-bind="componentProps" @close="onClose" />
       </div>
 
       <v-card-actions class="pa-6">
         <v-spacer />
         <v-btn
-          depressed
-          color="transparent"
-          :small="false"
+          text
           min-width="80"
           class="text-capitalize grey--text"
+          v-text="$t(cancelLabel || 'button.cancel')"
           @click="onClose"
-        >
-          btn.cancel
-        </v-btn>
-        <v-btn :small="false" min-width="80" @click="onAction">btn.ok</v-btn>
+        />
+        <v-btn min-width="80" color="primary" elevation="0" v-text="$t(actionLabel || 'button.ok')" @click="onAction" />
       </v-card-actions>
       <v-overlay v-if="progress" absolute>
         <v-progress-circular indeterminate />
@@ -57,11 +54,6 @@
     },
 
     computed: {
-      // return the component to be shown inside dialog by dynamically importing it
-      contentComponent() {
-        // return 'aaa'
-        return this.component
-      },
       // returns a boolean showing/hiding the dialog if component is set
       displayDialog() {
         return this.component !== null
@@ -92,6 +84,7 @@
         this.componentProps = null
         this.cancelLabel = null
         this.actionLabel = null
+        this.width = null
         this.progress = false
 
         this.$emit('close')
@@ -104,7 +97,14 @@
         this.progress = true
         await this.$refs.content.submit()
         this.progress = false
-        this.onClose()
+
+        /**
+         * the dialog is not closed at this point
+         * because of the result of the action which might
+         * return invalid form or error response
+         *
+         * the dialog is closed when content component emits 'close' event
+         */
       },
     },
   }

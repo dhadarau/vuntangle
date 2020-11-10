@@ -2,6 +2,7 @@
   <div class="ut-toast-container">
     <transition-group name="slide" tag="div">
       <v-alert
+        dense
         v-for="toast in toasts"
         :key="`toast_${toast.start}`"
         type="success"
@@ -72,6 +73,7 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-end;
+    z-index: 202;
   }
 
   .slide-enter-active {
