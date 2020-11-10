@@ -4,6 +4,9 @@ module.exports = {
   host: '0.0.0.0',
   port: 9090,
   base: '/vuntangle/',
+  markdown: {
+    lineNumbers: true
+  },
   themeConfig: {
     // logo: '/untangle-logo.svg',
     // nav: [

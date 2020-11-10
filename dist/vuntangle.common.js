@@ -52843,12 +52843,12 @@ function _createClass(Constructor, protoProps, staticProps) {
   if (staticProps) _defineProperties(Constructor, staticProps);
   return Constructor;
 }
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"1724444d-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/UDialog/UDialog.vue?vue&type=template&id=d24c02e4&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"1724444d-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/UDialog/UDialog.vue?vue&type=template&id=795b0424&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('v-dialog',{attrs:{"transition":false,"persistent":"","width":_vm.width || 600},on:{"keydown":[function($event){if(!$event.type.indexOf('key')&&_vm._k($event.keyCode,"esc",27,$event.key,["Esc","Escape"])){ return null; }return _vm.onClose($event)},function($event){if(!$event.type.indexOf('key')&&_vm._k($event.keyCode,"enter",13,$event.key,"Enter")){ return null; }return _vm.onAction($event)}]},model:{value:(_vm.displayDialog),callback:function ($$v) {_vm.displayDialog=$$v},expression:"displayDialog"}},[_c('v-card',[_c('v-card-title',{staticClass:"text-h5 font-weight-light"},[_c('span',{domProps:{"innerHTML":_vm._s(_vm.title)}}),_c('v-spacer'),_c('v-btn',{attrs:{"small":false,"icon":"","color":"grey"},on:{"click":_vm.onClose}},[_c('v-icon',[_vm._v("mdi-close")])],1)],1),(_vm.component)?_c('div',{staticClass:"px-6",style:(("max-height: " + (_vm.height || 400) + "px; overflow-y: auto"))},[_c(_vm.component,_vm._b({ref:"content",tag:"component",on:{"close":_vm.onClose}},'component',_vm.componentProps,false))],1):_vm._e(),_c('v-card-actions',{staticClass:"pa-6"},[_c('v-spacer'),_c('v-btn',{staticClass:"text-capitalize grey--text",attrs:{"text":"","min-width":"80"},domProps:{"textContent":_vm._s(_vm.$t(_vm.cancelLabel || 'button.cancel'))},on:{"click":_vm.onClose}}),_c('v-btn',{attrs:{"min-width":"80","color":"primary","elevation":"0"},domProps:{"textContent":_vm._s(_vm.$t(_vm.actionLabel || 'button.ok'))},on:{"click":_vm.onAction}})],1),(_vm.progress)?_c('v-overlay',{attrs:{"absolute":""}},[_c('v-progress-circular',{attrs:{"indeterminate":""}})],1):_vm._e()],1)],1)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/UDialog/UDialog.vue?vue&type=template&id=d24c02e4&
+// CONCATENATED MODULE: ./src/components/UDialog/UDialog.vue?vue&type=template&id=795b0424&
 
 // EXTERNAL MODULE: ./node_modules/regenerator-runtime/runtime.js
 var runtime = __webpack_require__("96cf");
@@ -52961,24 +52961,10 @@ function _asyncToGenerator(fn) {
   },
   methods: {
     /**
-     * Method showing progress if async action ongoing
-     */
-    showLoading: function showLoading() {
-      this.progress = true;
-    },
-
-    /**
-     * Method hiding the progress if async action finished
-     */
-    hideLoading: function hideLoading() {
-      this.progress = false;
-      this.onClose(); // close dialog on finish
-    },
-
-    /**
      * Hides and resets the dialog data
      */
     onClose: function onClose() {
+      this.$emit('close');
       this.title = null;
       this.component = null;
       this.componentProps = null;
@@ -52986,7 +52972,7 @@ function _asyncToGenerator(fn) {
       this.actionLabel = null;
       this.width = null;
       this.progress = false;
-      this.$emit('close');
+      this.$off('close');
     },
 
     /**
@@ -53209,12 +53195,12 @@ var UDialog_Dialog = /*#__PURE__*/function () {
 
 
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"1724444d-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/UConfirm/UConfirm.vue?vue&type=template&id=323b7c2e&
-var UConfirmvue_type_template_id_323b7c2e_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('v-dialog',{attrs:{"transition":false,"persistent":"","width":_vm.width || 600},on:{"keydown":[function($event){if(!$event.type.indexOf('key')&&_vm._k($event.keyCode,"esc",27,$event.key,["Esc","Escape"])){ return null; }return _vm.onClose($event)},function($event){if(!$event.type.indexOf('key')&&_vm._k($event.keyCode,"enter",13,$event.key,"Enter")){ return null; }return _vm.onAction($event)}]},model:{value:(_vm.show),callback:function ($$v) {_vm.show=$$v},expression:"show"}},[_c('v-card',{staticClass:"test"},[_c('v-card-title',{staticClass:"text-h5 font-weight-light"},[_c('span',{domProps:{"innerHTML":_vm._s(_vm.$t(_vm.title))}}),_c('v-spacer'),_c('v-btn',{attrs:{"small":false,"icon":"","color":"grey"},on:{"click":_vm.onClose}},[_c('v-icon',[_vm._v("mdi-close")])],1)],1),(_vm.message)?_c('v-card-text',{domProps:{"innerHTML":_vm._s(_vm.message)}}):_vm._e(),_c('v-card-actions',{staticClass:"pa-6"},[_c('v-spacer'),_c('v-btn',{staticClass:"text-capitalize grey--text",attrs:{"text":"","min-width":"80"},domProps:{"textContent":_vm._s(_vm.$t(_vm.cancelLabel || 'button.no'))},on:{"click":_vm.onClose}}),_c('v-btn',{attrs:{"min-width":"80","color":"primary","elevation":"0"},domProps:{"textContent":_vm._s(_vm.$t(_vm.confirmLabel || 'button.yes'))},on:{"click":_vm.onConfirm}})],1),(_vm.progress)?_c('v-overlay',{attrs:{"absolute":"","color":"white"}},[_c('v-progress-circular',{attrs:{"indeterminate":"","color":"utGreen"}})],1):_vm._e()],1)],1)}
-var UConfirmvue_type_template_id_323b7c2e_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"1724444d-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/UConfirm/UConfirm.vue?vue&type=template&id=04aa26d9&
+var UConfirmvue_type_template_id_04aa26d9_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('v-dialog',{attrs:{"transition":false,"persistent":"","width":_vm.width || 600},on:{"keydown":[function($event){if(!$event.type.indexOf('key')&&_vm._k($event.keyCode,"esc",27,$event.key,["Esc","Escape"])){ return null; }return _vm.onClose($event)},function($event){if(!$event.type.indexOf('key')&&_vm._k($event.keyCode,"enter",13,$event.key,"Enter")){ return null; }return _vm.onAction($event)}]},model:{value:(_vm.show),callback:function ($$v) {_vm.show=$$v},expression:"show"}},[_c('v-card',{staticClass:"test"},[_c('v-card-title',{staticClass:"text-h5 font-weight-light"},[_c('span',{domProps:{"innerHTML":_vm._s(_vm.$t(_vm.title))}}),_c('v-spacer'),_c('v-btn',{attrs:{"small":false,"icon":"","color":"grey"},on:{"click":_vm.onClose}},[_c('v-icon',[_vm._v("mdi-close")])],1)],1),(_vm.message)?_c('v-card-text',{domProps:{"innerHTML":_vm._s(_vm.message)}}):_vm._e(),_c('v-card-actions',{staticClass:"pa-6"},[_c('v-spacer'),_c('v-btn',{staticClass:"text-capitalize grey--text",attrs:{"text":"","min-width":"80"},domProps:{"textContent":_vm._s(_vm.$t(_vm.cancelLabel || 'button.no'))},on:{"click":_vm.onClose}}),_c('v-btn',{attrs:{"min-width":"80","color":"primary","elevation":"0"},domProps:{"textContent":_vm._s(_vm.$t(_vm.confirmLabel || 'button.yes'))},on:{"click":_vm.onConfirm}})],1),(_vm.progress)?_c('v-overlay',{attrs:{"absolute":"","color":"white"}},[_c('v-progress-circular',{attrs:{"indeterminate":"","color":"utGreen"}})],1):_vm._e()],1)],1)}
+var UConfirmvue_type_template_id_04aa26d9_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/UConfirm/UConfirm.vue?vue&type=template&id=323b7c2e&
+// CONCATENATED MODULE: ./src/components/UConfirm/UConfirm.vue?vue&type=template&id=04aa26d9&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/UConfirm/UConfirm.vue?vue&type=script&lang=js&
 
@@ -53287,12 +53273,14 @@ var UConfirmvue_type_template_id_323b7c2e_staticRenderFns = []
      * Hides and resets the dialog data
      */
     onClose: function onClose() {
+      this.$emit('close');
       this.title = null;
       this.message = null;
       this.cancelLabel = null;
       this.confirmLabel = null;
       this.width = null;
       this.progress = false;
+      this.$off('close');
       this.$off('confirm');
     },
     onConfirm: function onConfirm() {
@@ -53334,8 +53322,8 @@ var UConfirmvue_type_template_id_323b7c2e_staticRenderFns = []
 
 var UConfirm_component = normalizeComponent(
   UConfirm_UConfirmvue_type_script_lang_js_,
-  UConfirmvue_type_template_id_323b7c2e_render,
-  UConfirmvue_type_template_id_323b7c2e_staticRenderFns,
+  UConfirmvue_type_template_id_04aa26d9_render,
+  UConfirmvue_type_template_id_04aa26d9_staticRenderFns,
   false,
   null,
   null,

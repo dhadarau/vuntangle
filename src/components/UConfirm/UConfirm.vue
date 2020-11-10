@@ -67,12 +67,16 @@
        * Hides and resets the dialog data
        */
       onClose() {
+        this.$emit('close')
+
         this.title = null
         this.message = null
         this.cancelLabel = null
         this.confirmLabel = null
         this.width = null
         this.progress = false
+
+        this.$off('close')
         this.$off('confirm')
       },
 

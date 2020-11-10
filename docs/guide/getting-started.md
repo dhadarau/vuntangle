@@ -7,10 +7,13 @@ To add **VUntangle** library to a project run the following command
 ```sh
 yarn add git+https://github.com/dhadarau/vuntangle.git
 ```
+As you note currently using directly the github repo.
+
+Looking into turning this as a npm package hosted on [npmjs.org](https://npmjs.org)
 
 ## Usage
 
-To use the library components **VUntangle** it must be added to the application entry point like below:
+To use the library components **VUntangle** it must be added to the host application entry point like below:
 
 ```js
 import Vue from "vue";

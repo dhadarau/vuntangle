@@ -62,23 +62,11 @@
 
     methods: {
       /**
-       * Method showing progress if async action ongoing
-       */
-      showLoading() {
-        this.progress = true
-      },
-      /**
-       * Method hiding the progress if async action finished
-       */
-      hideLoading() {
-        this.progress = false
-        this.onClose() // close dialog on finish
-      },
-
-      /**
        * Hides and resets the dialog data
        */
       onClose() {
+        this.$emit('close')
+
         this.title = null
         this.component = null
         this.componentProps = null
@@ -87,7 +75,7 @@
         this.width = null
         this.progress = false
 
-        this.$emit('close')
+        this.$off('close')
       },
 
       /**
