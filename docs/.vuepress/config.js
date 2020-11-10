@@ -24,17 +24,17 @@ module.exports = {
         collapsable: false,
         children: [
           ['/guide/getting-started','Getting Started'],
-          ['/guide/introduction','Introduction']
+          ['/guide/ut-instance','$ut instance']
         ]
       },
       {
-        title: 'Global Components',
-        path: '/global-components/',
+        title: 'Instances',
+        path: '/instances/',
         collapsable: false,
         children: [
-          ['/global-components/UDialog','UDialog'],
-          ['/global-components/UConfirm','UConfirm'],
-          ['/global-components/UToast','UToast'],
+          ['/instances/dialog','$ut.dialog'],
+          ['/instances/confirm','$ut.confirm'],
+          ['/instances/toast','$ut.toast'],
         ]
       },
       {
