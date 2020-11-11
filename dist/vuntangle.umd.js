@@ -52852,64 +52852,21 @@ function _createClass(Constructor, protoProps, staticProps) {
   if (staticProps) _defineProperties(Constructor, staticProps);
   return Constructor;
 }
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"1724444d-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/UDialog/UDialog.vue?vue&type=template&id=795b0424&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('v-dialog',{attrs:{"transition":false,"persistent":"","width":_vm.width || 600},on:{"keydown":[function($event){if(!$event.type.indexOf('key')&&_vm._k($event.keyCode,"esc",27,$event.key,["Esc","Escape"])){ return null; }return _vm.onClose($event)},function($event){if(!$event.type.indexOf('key')&&_vm._k($event.keyCode,"enter",13,$event.key,"Enter")){ return null; }return _vm.onAction($event)}]},model:{value:(_vm.displayDialog),callback:function ($$v) {_vm.displayDialog=$$v},expression:"displayDialog"}},[_c('v-card',[_c('v-card-title',{staticClass:"text-h5 font-weight-light"},[_c('span',{domProps:{"innerHTML":_vm._s(_vm.title)}}),_c('v-spacer'),_c('v-btn',{attrs:{"small":false,"icon":"","color":"grey"},on:{"click":_vm.onClose}},[_c('v-icon',[_vm._v("mdi-close")])],1)],1),(_vm.component)?_c('div',{staticClass:"px-6",style:(("max-height: " + (_vm.height || 400) + "px; overflow-y: auto"))},[_c(_vm.component,_vm._b({ref:"content",tag:"component",on:{"close":_vm.onClose}},'component',_vm.componentProps,false))],1):_vm._e(),_c('v-card-actions',{staticClass:"pa-6"},[_c('v-spacer'),_c('v-btn',{staticClass:"text-capitalize grey--text",attrs:{"text":"","min-width":"80"},domProps:{"textContent":_vm._s(_vm.$t(_vm.cancelLabel || 'button.cancel'))},on:{"click":_vm.onClose}}),_c('v-btn',{attrs:{"min-width":"80","color":"primary","elevation":"0"},domProps:{"textContent":_vm._s(_vm.$t(_vm.actionLabel || 'button.ok'))},on:{"click":_vm.onAction}})],1),(_vm.progress)?_c('v-overlay',{attrs:{"absolute":""}},[_c('v-progress-circular',{attrs:{"indeterminate":""}})],1):_vm._e()],1)],1)}
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"1724444d-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/UDialog/UDialog.vue?vue&type=template&id=34e7a876&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('v-dialog',{attrs:{"transition":false,"persistent":"","width":_vm.width || 600},on:{"keydown":[function($event){if(!$event.type.indexOf('key')&&_vm._k($event.keyCode,"esc",27,$event.key,["Esc","Escape"])){ return null; }return _vm.onClose($event)},function($event){if(!$event.type.indexOf('key')&&_vm._k($event.keyCode,"enter",13,$event.key,"Enter")){ return null; }return _vm.onAction($event)}]},model:{value:(_vm.displayDialog),callback:function ($$v) {_vm.displayDialog=$$v},expression:"displayDialog"}},[_c('v-card',[_c('v-card-title',{staticClass:"text-h5 font-weight-light"},[_c('span',{domProps:{"innerHTML":_vm._s(_vm.$t(_vm.title))}}),_c('v-spacer'),_c('v-btn',{attrs:{"small":false,"icon":"","color":"grey"},on:{"click":_vm.onClose}},[_c('v-icon',[_vm._v("mdi-close")])],1)],1),(_vm.component)?_c('div',{staticClass:"px-6",style:(("max-height: " + (_vm.height || 400) + "px; overflow-y: auto"))},[_c(_vm.component,_vm._b({ref:"content",tag:"component",on:{"progress-show":function($event){_vm.progress = true},"progress-hide":function($event){_vm.progress = false},"close":_vm.onClose}},'component',_vm.componentProps,false))],1):_vm._e(),_c('v-card-actions',{staticClass:"pa-6"},[_c('v-spacer'),_c('v-btn',{staticClass:"text-capitalize grey--text",attrs:{"text":"","min-width":"80"},domProps:{"textContent":_vm._s(_vm.$t(_vm.cancelLabel || 'button.cancel'))},on:{"click":_vm.onClose}}),_c('v-btn',{attrs:{"min-width":"80","color":"primary","elevation":"0"},domProps:{"textContent":_vm._s(_vm.$t(_vm.actionLabel || 'button.ok'))},on:{"click":_vm.onAction}})],1),(_vm.progress)?_c('v-overlay',{attrs:{"absolute":""}},[_c('v-progress-circular',{attrs:{"indeterminate":""}})],1):_vm._e()],1)],1)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/UDialog/UDialog.vue?vue&type=template&id=795b0424&
+// CONCATENATED MODULE: ./src/components/UDialog/UDialog.vue?vue&type=template&id=34e7a876&
 
-// EXTERNAL MODULE: ./node_modules/regenerator-runtime/runtime.js
-var runtime = __webpack_require__("96cf");
-
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es.object.to-string.js
-var es_object_to_string = __webpack_require__("d3b7");
-
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es.promise.js
-var es_promise = __webpack_require__("e6cf");
-
-// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js
-
-
-
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {
-  try {
-    var info = gen[key](arg);
-    var value = info.value;
-  } catch (error) {
-    reject(error);
-    return;
-  }
-
-  if (info.done) {
-    resolve(value);
-  } else {
-    Promise.resolve(value).then(_next, _throw);
-  }
-}
-
-function _asyncToGenerator(fn) {
-  return function () {
-    var self = this,
-        args = arguments;
-    return new Promise(function (resolve, reject) {
-      var gen = fn.apply(self, args);
-
-      function _next(value) {
-        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);
-      }
-
-      function _throw(err) {
-        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);
-      }
-
-      _next(undefined);
-    });
-  };
-}
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/UDialog/UDialog.vue?vue&type=script&lang=js&
-
-
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -52973,7 +52930,8 @@ function _asyncToGenerator(fn) {
      * Hides and resets the dialog data
      */
     onClose: function onClose() {
-      this.$emit('close');
+      this.$emit('close'); // this notifies dialog opener about closing
+
       this.title = null;
       this.component = null;
       this.componentProps = null;
@@ -52983,39 +52941,9 @@ function _asyncToGenerator(fn) {
       this.progress = false;
       this.$off('close');
     },
-
-    /**
-     * Method called when action occurs
-     */
     onAction: function onAction() {
-      var _this = this;
-
-      return _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
-        return regeneratorRuntime.wrap(function _callee$(_context) {
-          while (1) {
-            switch (_context.prev = _context.next) {
-              case 0:
-                _this.progress = true;
-                _context.next = 3;
-                return _this.$refs.content.submit();
-
-              case 3:
-                _this.progress = false;
-                /**
-                 * the dialog is not closed at this point
-                 * because of the result of the action which might
-                 * return invalid form or error response
-                 *
-                 * the dialog is closed when content component emits 'close' event
-                 */
-
-              case 4:
-              case "end":
-                return _context.stop();
-            }
-          }
-        }, _callee);
-      }))();
+      // the inner content component must implement "action" method
+      this.$refs.content.action();
     }
   }
 });
@@ -53211,6 +53139,54 @@ var UConfirmvue_type_template_id_04aa26d9_staticRenderFns = []
 
 // CONCATENATED MODULE: ./src/components/UConfirm/UConfirm.vue?vue&type=template&id=04aa26d9&
 
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es.object.to-string.js
+var es_object_to_string = __webpack_require__("d3b7");
+
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es.promise.js
+var es_promise = __webpack_require__("e6cf");
+
+// EXTERNAL MODULE: ./node_modules/regenerator-runtime/runtime.js
+var runtime = __webpack_require__("96cf");
+
+// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js
+
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {
+  try {
+    var info = gen[key](arg);
+    var value = info.value;
+  } catch (error) {
+    reject(error);
+    return;
+  }
+
+  if (info.done) {
+    resolve(value);
+  } else {
+    Promise.resolve(value).then(_next, _throw);
+  }
+}
+
+function _asyncToGenerator(fn) {
+  return function () {
+    var self = this,
+        args = arguments;
+    return new Promise(function (resolve, reject) {
+      var gen = fn.apply(self, args);
+
+      function _next(value) {
+        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);
+      }
+
+      function _throw(err) {
+        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);
+      }
+
+      _next(undefined);
+    });
+  };
+}
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/UConfirm/UConfirm.vue?vue&type=script&lang=js&
 
 

@@ -9,14 +9,21 @@
   >
     <v-card>
       <v-card-title class="text-h5 font-weight-light">
-        <span v-html="title"></span>
+        <span v-html="$t(title)"></span>
         <v-spacer />
         <v-btn :small="false" icon color="grey" @click="onClose"><v-icon>mdi-close</v-icon></v-btn>
       </v-card-title>
 
       <!-- the component being rendered inside dialog with the props passed to it -->
       <div v-if="component" :style="`max-height: ${height || 400}px; overflow-y: auto`" class="px-6">
-        <component :is="component" ref="content" v-bind="componentProps" @close="onClose" />
+        <component
+          :is="component"
+          ref="content"
+          v-bind="componentProps"
+          @progress-show="progress = true"
+          @progress-hide="progress = false"
+          @close="onClose"
+        />
       </div>
 
       <v-card-actions class="pa-6">
@@ -65,7 +72,7 @@
        * Hides and resets the dialog data
        */
       onClose() {
-        this.$emit('close')
+        this.$emit('close') // this notifies dialog opener about closing
 
         this.title = null
         this.component = null
@@ -78,21 +85,9 @@
         this.$off('close')
       },
 
-      /**
-       * Method called when action occurs
-       */
-      async onAction() {
-        this.progress = true
-        await this.$refs.content.submit()
-        this.progress = false
-
-        /**
-         * the dialog is not closed at this point
-         * because of the result of the action which might
-         * return invalid form or error response
-         *
-         * the dialog is closed when content component emits 'close' event
-         */
+      onAction() {
+        // the inner content component must implement "action" method
+        this.$refs.content.action()
       },
     },
   }
