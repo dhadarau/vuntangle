@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'VUntangle',
+  title: 'Vuntangle',
   description: 'Untangle Vue & Vuetify based UI library',
   host: '0.0.0.0',
   port: 9090,
@@ -31,18 +31,22 @@ module.exports = {
         ]
       },
       {
-        title: 'Instances',
-        path: '/instances/',
+        title: 'Constructors',
         collapsable: false,
         children: [
-          ['/instances/dialog','$ut.dialog'],
-          ['/instances/confirm','$ut.confirm'],
-          ['/instances/toast','$ut.toast'],
+          ['/constructors/dialog','$ut.dialog'],
+          ['/constructors/confirm','$ut.confirm'],
+          ['/constructors/toast','$ut.toast'],
         ]
       },
       {
-        title: 'Other Components',
-        path: '/other-components/',
+        title: 'Components',
+        collapsable: false,
+        children: [
+          ['/components/u-grid','UGrid'],
+          ['/components/u-clipboard','UClipboard'],
+          ['/components/u-widget','UWidget'],
+        ]
       }
     ]
   },
